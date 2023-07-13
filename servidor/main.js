@@ -21,7 +21,7 @@ try {                                                   //try catch para evitar 
     console.log(`el error de conexion fue ${error}`);   //se muestra el error
 }
 
-const PORT = process.env.PORT || 3001;                  //conexion al servidor backend en el puerto 3001 o en el puerto que se le asigne process.env.PORT que es el puerto que le asigne heroku
+const PORT = process.env.PORT || 3001;                  //conexion al servidor backend en el puerto 3001 o en el puerto que se le asigne process.env.PORT que es el puerto que le asigne a render
 
 app.listen(PORT, ()=>{                                  //app.listen para que el servidor escuche en el puerto que se le asigno                                
     console.log(`server running on port ${PORT}`);      //info de donde esta corriendo el servidor
