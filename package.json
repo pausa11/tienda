@@ -4,9 +4,7 @@
   "main": "./servidor/main.js",
   "type": "module",
   "scripts": {
-    "start:server": "node servidor/main.js",
-    "start:client": "cd cliente && npm start",
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start": "nodemon main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
