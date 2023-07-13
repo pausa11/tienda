@@ -4,7 +4,7 @@
   "main": "./servidor/main.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon main.js",
+    "start": "concurrently \"nodemon main.js\" \"cd cliente && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -18,5 +18,8 @@
     "pg": "^8.11.1",
     "sequelize": "^6.32.1",
     "stripe": "^12.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
   }
 }
