@@ -6,7 +6,7 @@ export const pay = async (req,res) => {             //se exporta la funcion pay 
     let {amount, id} = req.body                     //se extrae el monto y el id del cuerpo de la peticion
     try {                                           //se intenta realizar el pago              
         const payment = await striper.paymentIntents.create({   //se crea el pago
-            amount ,                               //se usa el monto
+            amount : amount ,                       //se usa el monto
             currency: 'COP',                        //se usa la moneda
             description: 'shop',                    //se usa la descripcion
             payment_method: id,                     //se usa el metodo de pago
